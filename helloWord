@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>利率</title>
+</head>
+<body>
+	<script>
+	var percount=parseInt(prompt("请输入班级人数")) ;
+		//定义数组村塾班级每个人的成绩
+		var perscores = [];
+		//循环的方式录入每个人的成绩
+		for( var i = 0;i < percount; i++){
+			//把每个人的成绩存储到数组中
+			perscores[perscores.length] = parseInt(prompt("请输入第"+(i + 1)+"个人的成绩"));
+		}
+		console.log(perscores);
+		//总成绩
+		var sum= 0;
+		var avg= 0; //平均值
+		var max = perscores[0];
+		var min = perscores[0];
+		for(var i = 0; i < perscores.length; i++) {
+			sum += perscores[i];
+			if(max < perscores[i]){
+				max = perscores[i];
+			}
+			if(min > perscores[i]){
+				Min = perscores[i];
+			}
+		}
+			avg = sum / perscores.length;
+			console.log("总成绩"+sum +"; 平均成绩"+avg +"; 最高成绩"+max +"; 最低成绩"+min);
+
+	</script>
+</body>
+</html>
